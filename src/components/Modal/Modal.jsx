@@ -8,7 +8,7 @@ export default function Modal({ images, modalId, toggleModal }) {
     return () => {
       window.removeEventListener('keydown', closeModal);
     };
-  }, []);
+  });
 
   const closeModal = event => {
     (event.key === 'Escape' || event.target === event.currentTarget) &&
