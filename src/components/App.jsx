@@ -76,9 +76,11 @@ export default function App() {
     setModalId(modalId);
   };
 
-  if (images.length === totalHits) {
-    Notify.info('No more images to show');
-  }
+  useEffect(() => {
+    if (images.length === totalHits) {
+      Notify.info('No more images to show');
+    }
+  }, [images, totalHits]);
 
   return (
     <>
